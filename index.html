@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS - Your Functional Cooking Companion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>RecipeJS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-    <header>
-        <h1>🍳 RecipeJS</h1>
-        <p>Your Functional Cooking Companion</p>
-    </header>
-    
-    <main>
-        <div id="recipe-container">
-            div class="controls">
-  <div class="filters">
-    <button data-filter="all" class="active">Show All</button>
-    <button data-filter="easy">Easy</button>
-    <button data-filter="medium">Medium</button>
-    <button data-filter="hard">Hard</button>
-    <button data-filter="quick">Quick (Under 30 min)</button>
-  </div>
+  <header class="header">
+    <h1>🍳 RecipeJS</h1>
 
-  <div class="sorts">
-    <button data-sort="none" class="active">Default</button>
-    <button data-sort="name">Name (A–Z)</button>
-    <button data-sort="time">Time (Fastest First)</button>
-  </div>
-</div>
+    <div class="search-bar">
+      <input id="search-input" type="text" placeholder="Search recipes..." />
+      <button id="clear-search" style="display:none;">✖</button>
+    </div>
+  </header>
 
-        </div>
-    </main>
-    
-    <script src="app.js"></script>
+  <main class="container">
+    <div class="controls">
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="easy">Easy</button>
+        <button data-filter="medium">Medium</button>
+        <button data-filter="hard">Hard</button>
+        <button data-filter="favorites">❤️ Favorites</button>
+      </div>
+
+      <div class="sorts">
+        <button data-sort="name">Name (A–Z)</button>
+        <button data-sort="time">Time (Fastest)</button>
+      </div>
+    </div>
+
+    <p id="recipe-counter" class="counter"></p>
+
+    <section id="recipe-container" class="recipe-container"></section>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
